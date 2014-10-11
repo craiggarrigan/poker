@@ -149,7 +149,7 @@ public class HandTest {
 	}
 	
 	@Test
-	public void shouldDetermineRoyalFlushHand(){
+	public void shouldDetermineRoyalFlushAsStraightFlushHand(){
 		Hand hand = new Hand(
 				new Card[] { new Card(Rank.TEN, Suit.DIAMONDS),
 						new Card(Rank.JACK, Suit.DIAMONDS),
@@ -157,7 +157,7 @@ public class HandTest {
 						new Card(Rank.KING, Suit.DIAMONDS),
 						new Card(Rank.ACE, Suit.DIAMONDS) });
 		
-		assertEquals(HandType.ROYAL_FLUSH, hand.getType());
+		assertEquals(HandType.STRAIGHT_FLUSH, hand.getType());
 	}
 
 }

@@ -26,9 +26,7 @@ public class Hand {
 	}
 
 	public HandType getType() {
-		if(hasRoyalStraight() && hasFlush())
-			return HandType.ROYAL_FLUSH;
-		else if(hasConventionalStraight() && hasFlush())
+		if(hasStraight() && hasFlush())
 			return HandType.STRAIGHT_FLUSH;
 		else if (hasQuads())
 			return HandType.QUADS;
